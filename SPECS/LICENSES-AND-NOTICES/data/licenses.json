@@ -2706,6 +2706,7 @@
                 "kernel-azure",
                 "kernel-hci",
                 "kernel-headers",
+                "kernel-next",
                 "kernel-mshv",
                 "kernel-rt",
                 "kernel-uvm",
