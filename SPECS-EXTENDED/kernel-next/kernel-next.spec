@@ -27,7 +27,7 @@
 
 Summary:        Linux Kernel
 Name:           kernel-next
-Version:        6.1.20.1
+Version:        6.1.29.1
 Release:        1%{?dist}
 License:        GPLv2
 Vendor:         Microsoft Corporation
@@ -420,8 +420,9 @@ ln -sf linux-%{uname_r}.cfg /boot/mariner.cfg
 %{_sysconfdir}/bash_completion.d/bpftool
 
 %changelog
-* Tue May 09 2023 Rachel Menge <rachelmenge@microsoft.com> - 6.1.20.1-1
-- Upgrade to 6.1.20.1
+* Tue May 09 2023 Rachel Menge <rachelmenge@microsoft.com> - 6.1.29.1-1
+- Create kernel-next package
+- Upgrade to 6.1.29.1
 
 * Tue May 09 2023 Rachel Menge <rachelmenge@microsoft.com> - 5.15.110.1-4
 - Enable CONFIG_EDAC_SKX
