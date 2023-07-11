@@ -1,12 +1,12 @@
 Summary:        Reference implementation of the iCalendar data type and serialization format
 Name:           libical
 Version:        3.0.9
-Release:        5%{?dist}
-License:        LGPLv2 OR MPLv2.0
+Release:        6%{?dist}
+License:        LGPL-2.1-only OR MPL-2.0
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
 URL:            https://libical.github.io/libical/
-Source:         https://github.com/%{name}/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
+Source0:         https://github.com/%{name}/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:  %{_bindir}/xsltproc
 BuildRequires:  cmake
 BuildRequires:  gcc
@@ -77,7 +77,7 @@ Development files needed for building things which link against %{name}-glib.
 rm %{buildroot}/%{_libexecdir}/libical/ical-glib-src-generator
 
 %check
-make test ARGS="-V" -C %{_target_platform}
+make test ARGS="-V" -C %{__cmake_builddir}
 
 %ldconfig_scriptlets
 
@@ -123,6 +123,10 @@ make test ARGS="-V" -C %{_target_platform}
 %{_datadir}/vala/vapi/libical-glib.vapi
 
 %changelog
+* Tue Jul 11 2023 Olivia Crain <oliviacrain@microsoft.com> - 3.0.9-6
+- Fix %%check by using proper build directory macro
+- Use SPDX license expression in license tag
+
 * Wed Jul 13 2022 Dallas Delaney <dadelan@microsoft.com> - 3.0.9-5
 - Promote to Mariner base repo
 - Lint spec
