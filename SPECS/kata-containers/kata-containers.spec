@@ -17,6 +17,9 @@
 
 %global kataagentdir            %{katauvmdir}/agent
 %global kataosbuilderdir        %{katauvmdir}/tools/osbuilder
+%global kataconfigdir           /usr/share/defaults/kata-containers
+%global kataclhdir              /usr/share/cloud-hypervisor
+%global katainitrddir           /var/cache/kata-containers/osbuilder-images/kernel-uvm
 
 %global runtime_make_vars       QEMUPATH=%{qemupath} \\\
                                 KERNELTYPE="compressed" \\\
@@ -144,6 +147,8 @@ sed -i 's#distro_config_dir="${script_dir}/${distro}#distro_config_dir="${script
 
 pushd src/runtime
 %make_install %{runtime_make_vars}
+sed -i -e "s|image = .*$|initrd = \"%{katainitrddir}/kata-containers-initrd.img\"|" %{buildroot}%{kataconfigdir}/configuration.toml
+sed -i -e "s|kernel = .*$|kernel = \"%{kataclhdir}/vmlinux.bin\"|" %{buildroot}%{kataconfigdir}/configuration.toml
 popd
 
 pushd src/agent
