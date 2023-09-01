@@ -7,7 +7,7 @@ Distribution:   Mariner
 
 Name: mdds
 Version: 1.5.0
-Release: 3%{?dist}
+Release: 4%{?dist}
 Summary: A collection of multi-dimensional data structures and indexing algorithms
 
 License: MIT
@@ -63,6 +63,9 @@ make check %{?_smp_mflags}
 %license LICENSE
 
 %changelog
+* Fri Sep 01 2023 Sam Meluch <sammeluch@microsoft.com> - 1.5.0-4
+- testing dash roll for mdds
+
 * Fri Oct 15 2021 Pawel Winogrodzki <pawelwi@microsoft.com> - 1.5.0-3
 - Initial CBL-Mariner import from Fedora 32 (license: MIT).
 
