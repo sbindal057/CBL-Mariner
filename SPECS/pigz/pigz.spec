@@ -1,7 +1,7 @@
 Summary:        Parallel Implementation of GZIP
 Name:           pigz
 Version:        2.6
-Release:        666%{?dist}
+Release:        2%{?dist}
 License:        zlib
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -11,7 +11,6 @@ Source0:        https://github.com/madler/%{name}/archive/v%{version}.tar.gz#/%{
 BuildRequires:  gcc
 BuildRequires:  make
 BuildRequires:  zlib-devel
-BuildRequires:  grub2-rpm-macros
 
 %description
 pigz, which stands for parallel implementation of gzip, is a fully
@@ -29,13 +28,8 @@ mkdir -p %{buildroot}%{_bindir}/
 install -p -m 755 pigz %{buildroot}%{_bindir}/
 install -p -m 755 unpigz %{buildroot}%{_bindir}/
 
-%post
-/sbin/ldconfig
-%grub2_post
-
-%postun
-/sbin/ldconfig
-%grub2_post
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %license README

@@ -118,7 +118,6 @@ Unsigned GRUB UEFI image
 %package efi-binary
 Summary:        GRUB UEFI image
 Group:          System Environment/Base
-Requires:       grub2
 
 # Some distros split 'grub2' into more subpackages. For now we're bundling it all together
 # inside the default package and adding these 'Provides' to make installation more user-friendly
