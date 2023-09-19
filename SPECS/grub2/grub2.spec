@@ -291,6 +291,7 @@ cp $GRUB_PXE_MODULE_SOURCE $EFI_BOOT_DIR/$GRUB_PXE_MODULE_NAME
 %defattr(-,root,root)
 %license COPYING
 %dir %{_sysconfdir}/grub.d
+%dir %{_sysconfdir}/default/grub.d
 %dir /boot/%{name}
 %config() %{_sysconfdir}/bash_completion.d/grub
 %config() %{_sysconfdir}/grub.d/00_header
@@ -341,7 +342,6 @@ cp $GRUB_PXE_MODULE_SOURCE $EFI_BOOT_DIR/$GRUB_PXE_MODULE_NAME
 %endif
 
 %files rpm-macros
-%dir %{_sysconfdir}/default/grub.d
 %{_rpmconfigdir}/macros.d/macros.grub2
 
 %changelog
