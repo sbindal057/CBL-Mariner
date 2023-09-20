@@ -1,7 +1,7 @@
 Summary:        Library to encode and decode webP format images
 Name:           libwebp
-Version:        1.2.2
-Release:        2%{?dist}
+Version:        1.3.1
+Release:        1%{?dist}
 License:        BSD
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -63,6 +63,9 @@ find %{buildroot} -type f -name "*.la" -delete -print
 %{_libdir}/pkgconfig/*.pc
 
 %changelog
+* Ted Sep 20 2023 Betty Lakes <bettylakes@microsoft.com> - 1.3.1-1
+- Upgrade to version 1.3.1
+
 * Fri Mar 31 2023 Pawel Winogrodzki <pawelwi@microsoft.com> - 1.2.2-2
 - Bumping release to re-build with newer 'libtiff' libraries.
 
