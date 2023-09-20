@@ -44,7 +44,6 @@ Requires:       filesystem
 Requires:       kmod
 Requires(post): coreutils
 Requires(postun): coreutils
-
 %grub2_configuration_requires
 
 %description
