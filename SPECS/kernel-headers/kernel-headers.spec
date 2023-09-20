@@ -36,7 +36,7 @@ cp -rv usr/include/* /%{buildroot}%{_includedir}
 %{_includedir}/*
 
 %changelog
-* Tue Aug 29 2023 Cameron Baird <cameronbaird@microsoft.com> - 5.15.131.1-2
+* Tue Sep 19 2023 Cameron Baird <cameronbaird@microsoft.com> - 5.15.131.1-2
 - Bump release to match kernel
 
 * Fri Sep 08 2023 CBL-Mariner Servicing Account <cblmargh@microsoft.com> - 5.15.131.1-1

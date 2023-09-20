@@ -419,7 +419,7 @@ ln -sf linux-%{uname_r}.cfg /boot/mariner.cfg
 %{_sysconfdir}/bash_completion.d/bpftool
 
 %changelog
-* Tue Aug 29 2023 Cameron Baird <cameronbaird@microsoft.com> - 5.15.131.1-2
+* Tue Sep 19 2023 Cameron Baird <cameronbaird@microsoft.com> - 5.15.131.1-2
 - Call grub2-mkconfig to regenerate configs only if the user has 
     previously used grub2-mkconfig for boot configuration. 
 
