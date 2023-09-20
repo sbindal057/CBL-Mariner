@@ -349,7 +349,6 @@ cp $GRUB_PXE_MODULE_SOURCE $EFI_BOOT_DIR/$GRUB_PXE_MODULE_NAME
 %endif
 
 %files rpm-macros
-%{_sysconfdir}/default/grub.d
 %{_rpmconfigdir}/macros.d/macros.grub2
 
 %files configuration
